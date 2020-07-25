@@ -9,8 +9,10 @@ using Microsoft.EntityFrameworkCore;
 namespace DatingApp.API.Controllers
 {
     // http://localhost:5000/api/values
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route("api/[controller]")] // attribute controlling
+    [ApiController] // automatically validate requests
+    // ControllerBase->HTTP responses, actions inside controller, no view support
+    // we will use angular for views.
     public class ValuesController : ControllerBase
     {
         private readonly DataContext _context;
@@ -19,12 +21,6 @@ namespace DatingApp.API.Controllers
             this._context = context;
 
         }
-        // GET api/values
-        // [HttpGet]
-        // public ActionResult<IEnumerable<string>> Get()
-        // {
-        //     return new string[] { "value1", "value2" };
-        // }
 
         [HttpGet]
         public async Task<IActionResult> GetValues(){
