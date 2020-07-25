@@ -32,6 +32,7 @@ namespace DatingApp.API
             );
             services.AddControllers();
             services.AddCors();
+            services.AddScoped() // add scoped is creating an instance for each http request, but also kinda reusable
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
