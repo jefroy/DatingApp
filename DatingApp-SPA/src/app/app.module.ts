@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 
 // our components
 import { AppComponent } from './app.component';
-import { ValueComponent } from './value/value.component';
 import { NavComponent } from './nav/nav.component';
 
 // our services
@@ -15,9 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-   declarations: [			
+   declarations: [
       AppComponent,
-      ValueComponent,
       NavComponent,
       HomeComponent,
       RegisterComponent
