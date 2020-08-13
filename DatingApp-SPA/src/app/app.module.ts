@@ -11,12 +11,16 @@ import { NavComponent } from './nav/nav.component';
 
 // our services
 import {AuthService} from './_services/auth.service';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-   declarations: [	
+   declarations: [			
       AppComponent,
       ValueComponent,
-      NavComponent
+      NavComponent,
+      HomeComponent,
+      RegisterComponent
    ],
    imports: [
       BrowserModule,
