@@ -14,23 +14,11 @@ export class HomeComponent implements OnInit {
 
   // tslint:disable-next-line: typedef
   ngOnInit() {
-    this.getValues();
   }
 
   // tslint:disable-next-line: typedef
   registerToggle(){
     this.registerMode = true;
-  }
-
-  // tslint:disable-next-line: typedef
-  getValues(){
-    this.http.get('http://localhost:5000/api/values').subscribe(response => {
-      this.values = response;
-    },
-    // tslint:disable-next-line: no-shadowed-variable
-    error => {
-      console.log(error);
-    });
   }
 
   // tslint:disable-next-line: typedef
