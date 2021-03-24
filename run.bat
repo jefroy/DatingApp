@@ -1,4 +1,4 @@
-cd DatingApp.API
+cd API
 start cmd.exe /k "dotnet watch run"
 
 cd ..
