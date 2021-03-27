@@ -8,12 +8,14 @@ start "RIDER" cmd /c "rider.bat . & exit /b"
 
 cd ..
 
-rem cd DatingApp-SPA
-rem start "ng serve" cmd /c "ng serve & exit /b"
+cd client
+start "ng serve" cmd /c "ng serve & exit /b"
+start "WEBSTORM" cmd /c "webstorm.bat . & exit /b"
 
 rem closeup
 TASKKILL /IM Code.exe
 TASKKILL /IM rider64.exe
+TASKKILL /IM webstorm64.exe
 
 exit /b
 
