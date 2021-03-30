@@ -1,5 +1,6 @@
 @echo off
-
+title "=-=- DATING APP -=-="
+start C:\Users\idisc\Desktop\Postman.lnk
 start "VSCODE" cmd /c "code . & exit /b"
 
 cd API
@@ -13,11 +14,11 @@ cd client
 start "WEBSTORM" cmd /c "webstorm.bat . & exit /b"
 
 cd ..
-
 rem closeup
+echo "Ready 2 close up shop"
+pause
 TASKKILL /IM Code.exe
 TASKKILL /IM rider64.exe
 TASKKILL /IM webstorm64.exe
-
 exit /b
 
