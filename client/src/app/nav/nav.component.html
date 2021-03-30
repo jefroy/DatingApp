@@ -3,7 +3,7 @@
 
     <a class="navbar-brand" href="#">jj app</a>
 
-    <ul class="navbar-nav mr-auto" *ngIf="loggedIn">
+    <ul class="navbar-nav mr-auto" *ngIf="(accountService.currentUser$ | async)">
       <li class="nav-item">
         <a class="nav-link" href="#">Matches</a>
       </li>
@@ -13,12 +13,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Messages</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" (click)="logout()">Logout</a>
-      </li>
     </ul>
 
-    <div class="dropdown" *ngIf="loggedIn" dropdown>
+    <div *ngIf="(accountService.currentUser$ | async)" class="dropdown" dropdown>
       <a class="dropdown-toggle text-light" dropdownToggle>Welcome user!</a>
       <div class="dropdown-menu mt-3" *dropdownMenu>
         <a class="dropdown-item">Edit Profile</a>
@@ -28,13 +25,13 @@
     </div>
 
     <form
-      *ngIf="!loggedIn"
+      *ngIf="(accountService.currentUser$ | async) === null"
       #loginForm="ngForm"
       (ngSubmit)="login()"
       class="form-inline mt-2 mt-md-0"
       autocomplete="off"
     >
-<!--      // [] -> receiving, () -> sending, [()] -> 2 way binding -->
+      <!--      // [] -> receiving, () -> sending, [()] -> 2 way binding -->
       <input
         name="username"
         [(ngModel)]="model.username"
