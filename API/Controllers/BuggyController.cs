@@ -1,4 +1,5 @@
-﻿using API.Data;
+﻿using System;
+using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -40,7 +41,7 @@ namespace API.Controllers
         public ActionResult<string> GetServerError()
         {
             var thing = _context.Users.Find(-1);
-            var thingToReturn = thing.ToString();
+            var thingToReturn = thing.ToString(); // if thing is null (which it will be) we get null ptr exc error
             return thingToReturn;
         }
         
