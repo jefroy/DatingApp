@@ -37,7 +37,7 @@ export class ErrorInterceptor implements HttpInterceptor {
               this.toastr.error(error.statusText === 'OK' ? 'Unauthorised' : error.statusText, error.status);
               break;
             case 404:
-              this.router.navigateByUrl('/not-found'); // todo implement this comp
+              this.router.navigateByUrl('/not-found');
               break;
             case 500:
               const navigationExtras: NavigationExtras = {state: {error: error.error}};
