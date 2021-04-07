@@ -20,5 +20,6 @@ pause
 TASKKILL /IM Code.exe
 TASKKILL /IM rider64.exe
 TASKKILL /IM webstorm64.exe
+TASKKILL /IM postman.exe
 exit /b
 
