@@ -15,7 +15,7 @@ start "WEBSTORM" cmd /c "webstorm.bat . & exit /b"
 
 cd ..
 rem closeup
-echo "Ready 2 close up shop"
+echo "Ready 2 close up shop@!"
 pause
 TASKKILL /IM Code.exe
 TASKKILL /IM rider64.exe
