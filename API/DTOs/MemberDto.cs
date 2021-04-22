@@ -10,7 +10,8 @@ namespace API.DTOs
         {
         }
         public int Id { get; set; } // entity framework recognizes this as the PK !
-        public string UserName { get; set; }
+        public string Username { get; set; }
+        public string PhotoUrl { get; set; }
         public string Gender { get; set; }
         public string Introduction { get; set; }
         public string LookingFor { get; set; }
